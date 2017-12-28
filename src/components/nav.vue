@@ -5,7 +5,7 @@
         心情日记
       </div>
       <el-menu
-        :default-active="$route.path"
+        :default-active="defaultActive"
         :router = "true"
         background-color="#fff"
         text-color="#000"
@@ -17,11 +17,14 @@
         <el-menu-item index="/admin">
           后台管理系统
         </el-menu-item>
-        <el-menu-item index="3">
+        <el-menu-item index="/about">
+          关于
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="/tag">
+          标签
         </el-menu-item>
-        <el-menu-item index="5">
+        <el-menu-item index="/sort">
+          分类
         </el-menu-item>
       </el-menu>
     </el-col>
@@ -30,17 +33,16 @@
 
 <script>
   export default {
-    name: 'nav',
+    name: 'nav_',
     data () {
       return {
-        defaultActive: '/index'
       }
     },
     created () {
       this.activeRouterRelateMenu()
     },
     methods: {
-      activeRouterRelateMenu () { // 刷新页面的时候根据router激活对应的menu
+      activeRouterRelateMenu () {
         const self = this
         self.defaultActive = self.$route.path
       }
@@ -55,7 +57,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    /*margin-top: 60px;*/
     height: auto;
     width: 1100px;
     margin: 0 auto;
@@ -68,22 +69,6 @@
       line-height: 86px;
       font-weight: bold;
     }
-    a {
-      text-decoration:none;
-      color: #000;
-      float:left;
-      width: 100%;
-    }
-    a:hover{
-      color:#ffd04b;
-    }
-    .mark{
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #ffd04b;
-    }
   }
 
 </style>
@@ -94,9 +79,6 @@
     }
     .el-menu-item:hover {
       background-color: #eee !important;
-    }
-    .el-form-item {
-      height: 40px;
     }
   }
 </style>

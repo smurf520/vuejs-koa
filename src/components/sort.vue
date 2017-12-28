@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    主页
+    分类
   </div>
 </template>
 
