@@ -1,16 +1,16 @@
 <template>
-    <div class="">
-
-    </div>
+  <div class="">
+主页
+  </div>
 </template>
 
 <script>
-    export default {
-        name: '',
-        data() {
-            return {};
-        },
-    };
+  export default {
+    name: '',
+    data () {
+      return {}
+    }
+  }
 </script>
 
 <style scoped>

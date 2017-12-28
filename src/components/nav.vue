@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="nav_">
     <el-col :span="6">
       <div class="title">
         心情日记
@@ -10,29 +10,18 @@
         background-color="#fff"
         text-color="#000"
         class="el-menu-vertical-demo"
-        active-text-color="#ffd04b"
-        @select = "select">
-        <el-menu-item index="/">
+        active-text-color="#ffd04b">
+        <el-menu-item index="/index">
           首页
-          <!--<router-link to="/Home">首页</router-link>-->
-          <!--<span slot="title" class="mark" v-if="index==='1'"></span>-->
         </el-menu-item>
-        <el-menu-item index="/Admin">
+        <el-menu-item index="/admin">
           后台管理系统
-          <!--<router-link to="/Admin">后台管理系统</router-link>-->
-          <!--<span slot="title" class="mark" v-if="index==='2'"></span>-->
         </el-menu-item>
         <el-menu-item index="3">
-          <!--<router-link to="/Home">关于</router-link>-->
-          <!--<span slot="title" class="mark" v-if="index==='3'"></span>-->
         </el-menu-item>
         <el-menu-item index="4">
-          <!--<router-link to="/Admin">标签</router-link>-->
-          <!--<span slot="title" class="mark" v-if="index==='4'"></span>-->
         </el-menu-item>
         <el-menu-item index="5">
-          <!--<router-link to="/Home">分类</router-link>-->
-          <!--<span slot="title" class="mark" v-if="index==='5'"></span>-->
         </el-menu-item>
       </el-menu>
     </el-col>
@@ -41,10 +30,10 @@
 
 <script>
   export default {
-    name: 'index',
+    name: 'nav',
     data () {
       return {
-        defaultActive: '/Home'
+        defaultActive: '/index'
       }
     },
     created () {
@@ -54,16 +43,13 @@
       activeRouterRelateMenu () { // 刷新页面的时候根据router激活对应的menu
         const self = this
         self.defaultActive = self.$route.path
-      },
-      select (key, path) {
-        this.index = key
       }
     }
   }
 </script>
 
 <style lang="less" scoped>
-  .index {
+  .nav_ {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -102,7 +88,7 @@
 
 </style>
 <style lang='less'>
-  .index {
+  .nav_ {
     .el-col {
       border: 1px solid #ccc;
     }

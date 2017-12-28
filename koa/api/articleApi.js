@@ -26,7 +26,7 @@ var resObj = (code, msg, data) => {
 exports.ADD_ARTICLE_INFO_API = async(ctx, next) => {
   try {
     let addInfo = ctx.request.body
-    let addData = new ArticleModel(addInfo)
+    let addData = new ArticleModel(addInfo.data)
     var data = await addData.save()
     ctx.body = resObj(1, '保存成功', data)
   } catch (e) {

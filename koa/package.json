@@ -22,9 +22,11 @@
     "koa2-cors": "^2.0.5",
     "mockjs": "^1.0.1-beta3",
     "mongoose": "^4.13.7",
+    "nodemailer": "^4.4.1",
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
+    "element-ui": "^2.0.9",
     "nodemon": "^1.8.1"
   }
 }

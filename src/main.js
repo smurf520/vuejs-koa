@@ -4,13 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+import ElementUI from 'element-ui'// 引入elementui
+import 'element-ui/lib/theme-chalk/index.css'// 引入elementui所需要的css
 Vue.prototype.$http = axios
-Vue.use(iView)
-
 Vue.config.productionTip = false
-
+Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
