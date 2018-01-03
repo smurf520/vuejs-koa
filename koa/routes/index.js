@@ -1,15 +1,24 @@
 const router = require('koa-router')()
 // var Mock = require('mockjs') // 引入mockjs
 const articleAPI = require('../api/articleAPI.js')
+const userAPI = require('../api/userAPI.js')
 // const Random = Mock.Random  // 引入mockjs生成随机属性的函数 random具体可以生成
 router.prefix('/index')
 // admin
 const add = articleAPI.ADD_ARTICLE_INFO_API
+// 用户模块
+const addUser = userAPI.USER_REGISTER_API
+const login = userAPI.USER_LOGIN_API
 /**
  *  admin
  */
 router.post('/addArticle', add)
-
+/**
+ *  USER
+ */
+router.get('/register', addUser)
+router.get('/login', login)
+// mock
 // router.post('/string', async (ctx, next) => {
 //   const produceNewsData = function () {
 //     let articles = []

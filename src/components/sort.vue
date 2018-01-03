@@ -1,12 +1,12 @@
 <template>
-  <div class="">
+  <div class="sort">
     分类
   </div>
 </template>
 
 <script>
   export default {
-    name: '',
+    name: 'Sort',
     data () {
       return {}
     }

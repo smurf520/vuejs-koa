@@ -1,7 +1,7 @@
 <template>
   <div class="nav_">
     <el-col :span="6">
-      <div class="title">
+      <div class="title" @click="toLogin">
         心情日记
       </div>
       <el-menu
@@ -33,7 +33,7 @@
 
 <script>
   export default {
-    name: 'nav_',
+    name: 'Nav_',
     data () {
       return {
       }
@@ -45,6 +45,9 @@
       activeRouterRelateMenu () {
         const self = this
         self.defaultActive = self.$route.path
+      },
+      toLogin () {
+        this.$router.push({path: '/login'})
       }
     }
   }
@@ -57,7 +60,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    height: auto;
+    background-color: yellow;
     width: 1100px;
     margin: 0 auto;
     .title {
@@ -68,6 +71,7 @@
       color: #fff;
       line-height: 86px;
       font-weight: bold;
+      cursor: pointer;
     }
   }
 

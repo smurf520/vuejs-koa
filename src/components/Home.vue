@@ -23,11 +23,6 @@
     },
     data () {
       return {
-        form: {
-          time: '',
-          title: '',
-          content: ''
-        }
       }
     }
   }
@@ -38,5 +33,8 @@
   .home{
     height:auto;
   }
+
+</style>
+<style>
 
 </style>

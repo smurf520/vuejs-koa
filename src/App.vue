@@ -7,5 +7,10 @@
 <script>
 
 </script>
+<style scoped lang="less">
+  #app{
+    height: auto;
+  }
+</style>
 
 

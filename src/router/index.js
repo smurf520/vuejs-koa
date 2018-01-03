@@ -6,6 +6,8 @@ import Index from '@/components/index'
 import About from '@/components/about'
 import Tag from '@/components/tag'
 import Sort from '@/components/sort'
+import Login from '@/components/login'
+import Register from '@/components/register'
 
 Vue.use(Router)
 
@@ -42,6 +44,16 @@ const routes = [
     path: '/admin',
     name: '后台管理',
     component: Admin
+  },
+  {
+    path: '/login',
+    name: '登录',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: '注册',
+    component: Register
   }
 ]
 const router = new Router({

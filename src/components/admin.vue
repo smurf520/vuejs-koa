@@ -51,7 +51,4 @@
 
 </style>
 <style lang="less">
-  /*.el-form-item {*/
-  /*height: 40px !important;*/
-  /*}*/
 </style>
